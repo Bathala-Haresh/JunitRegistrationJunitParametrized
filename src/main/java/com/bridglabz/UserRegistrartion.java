@@ -14,6 +14,6 @@ public interface UserRegistrartion
 	boolean lastNameValidate(String lastName);
 	boolean phoneNumberValidate(String phoneNumber);
 	boolean emailValidate(String email);
-	
+	boolean passwordValidate(String password);
 
 }

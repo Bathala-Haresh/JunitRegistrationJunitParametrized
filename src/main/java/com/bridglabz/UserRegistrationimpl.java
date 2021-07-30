@@ -74,6 +74,28 @@ public class UserRegistrationimpl implements UserRegistrartion{
 		return matcher.find();
 
 	}
+	/*
+	 * Purpose: method to validate password.
+	 * Condition for regex is:
+	 * minimum 8 characters 
+	 * should have atleast 1 upper case
+	 * should have atleast 1 numeric number
+	 * has exactly 1 special character
+	 * should clear all email samples
+	 * @param password: takes the password argument given by user
+	 * @return {@code true} if, and only if, a subsequence of the input
+	 *          sequence matches this matcher's pattern. 
+	 */
+
+	@Override
+	public boolean passwordValidate(String password) {		
+
+		Pattern pattern=Pattern.compile("^(?=.{8,20})(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$");
+		Matcher matcher=pattern.matcher(password);
+		return matcher.find();
+
+
+	}
 }
 
 

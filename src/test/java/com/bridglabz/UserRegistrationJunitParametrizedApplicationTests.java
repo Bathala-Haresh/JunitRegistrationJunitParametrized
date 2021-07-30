@@ -61,25 +61,4 @@ class UserRegistrationJunitParametrizedApplicationTests {
     public void givenMobileNumber_whenShort_shouldReturnFalse() {
         Assert.assertFalse(validator.phoneNumberValidate("8247614"));
     }
-	
-	public static List<String> emailIds_With_ExpectedResult() {
-		
-		List<String> list = new ArrayList<>();
-		list.add("abc.syz@bl.co.in");
-		list.add("abc@%*.com");
-		list.add("abc111@abc.com");
-		
-		return list;
-	}
-	@Test
-	public void givenEmailIds_WhenProper_ShouldReturnExpectedResult()  {
-		boolean result=false;
-		for (String str:emailIds_With_ExpectedResult())
-		{
-			result = userRegistration.emailValidate(str);
-
-		}
-		
-		Assert.assertEquals(true, result);
-	}
 }

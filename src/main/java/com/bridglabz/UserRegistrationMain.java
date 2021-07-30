@@ -26,6 +26,11 @@ public class UserRegistrationMain {
 		System.out.println("Enter your email : ");
 		String email=sc.next();
 		userRegistrationimpl.emailValidate(email);
+		
+		System.out.println("Enter your Password : ");
+		String password=sc.next();
+		userRegistrationimpl.passwordValidate(password);
+		
 
 		System.out.println("Enter your PhoneNumber : ");
 		String phoneNumber=sc.next();
