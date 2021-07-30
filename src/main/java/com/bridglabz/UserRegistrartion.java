@@ -11,4 +11,6 @@ package com.bridglabz;
 public interface UserRegistrartion 
 {
 	boolean firstNameValidate(String firstName);
+	boolean lastNameValidate(String lastName);
+
 }

@@ -39,4 +39,5 @@ class UserRegistrationJunitParametrizedApplicationTests {
 		boolean result=validator.firstNameValidate("");
 		Assert.assertFalse(result);
 	}
+
 }
