@@ -39,5 +39,26 @@ class UserRegistrationJunitParametrizedApplicationTests {
 		boolean result=validator.firstNameValidate("");
 		Assert.assertFalse(result);
 	}
+    // Test cases to validate Mobile number.
 
+
+    @Test
+    public void givenMobileNumber_whenValid_shouldReturnTrue() {
+        Assert.assertTrue(validator.phoneNumberValidate("91 8247614882"));
+    }
+
+    @Test
+    public void givenMobileNumber_whenNoSpaceAfterCode_shouldReturnFalse() {
+        Assert.assertFalse(validator.phoneNumberValidate("918247614882"));
+    }
+
+    @Test
+    public void givenMobileNumber_whenNoCountryCode_shouldReturnFalse() {
+        Assert.assertFalse(validator.phoneNumberValidate("8247614882"));
+    }
+
+    @Test
+    public void givenMobileNumber_whenShort_shouldReturnFalse() {
+        Assert.assertFalse(validator.phoneNumberValidate("8247614"));
+    }
 }

@@ -44,6 +44,21 @@ public class UserRegistrationimpl implements UserRegistrartion{
 		return matcher.find();
 
 	}
+	/*
+	 * Purpose: method to validate valid phoneNumber .
+	 * Condition for regex is, country code followed by space and 10 digit number
+	 * @return {@code true} if, and only if, a subsequence of the input
+	 *          sequence matches this matcher's pattern.
+	 */
+
+	@Override
+	public boolean phoneNumberValidate(String phoneNumber) {
+		Pattern pattern=Pattern.compile("^[0-9]{2}[\\s][0-9]{10}$");
+		Matcher matcher=pattern.matcher(phoneNumber);
+		return matcher.find();
+
+	}
+	
 }
 
 

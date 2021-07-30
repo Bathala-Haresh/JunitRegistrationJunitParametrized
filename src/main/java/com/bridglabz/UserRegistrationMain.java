@@ -22,6 +22,9 @@ public class UserRegistrationMain {
 		System.out.println("Enter your Last Name : ");
 		String lastName=sc.next();
 		userRegistrationimpl.lastNameValidate(lastName);
+		System.out.println("Enter your PhoneNumber : ");
+		String phoneNumber=sc.next();
+		userRegistrationimpl.phoneNumberValidate(phoneNumber);
 		
 	}
 
