@@ -58,7 +58,22 @@ public class UserRegistrationimpl implements UserRegistrartion{
 		return matcher.find();
 
 	}
-	
+	/*
+	 * Purpose: method to validate email.
+	 * Condition for regex is, email has 3 mandatory parts that should be followed
+	 *
+	 * @param email: takes the email argument given by user
+	 * @return {@code true} if, and only if, a subsequence of the input
+	 *          sequence matches this matcher's pattern. 
+	 */
+
+	@Override
+	public boolean emailValidate(String email) {
+		Pattern pattern=Pattern.compile("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$");
+		Matcher matcher=pattern.matcher(email);
+		return matcher.find();
+
+	}
 }
 
 
